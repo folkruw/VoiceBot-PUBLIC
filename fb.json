@@ -1,0 +1,26 @@
+{
+  "bda_channel_ids": [
+    1129427584216743966
+  ],
+  "ref_channel_ids": [
+    1321955414719332352
+  ],
+  "invisible_channel_ids": [
+    1086382011083669534
+  ],
+  "temporary_channels": [
+
+  ],
+  "allowed_roles": [
+    979531761392447549
+  ],
+  "command_roles": [
+    968909638613483578
+  ],
+  "manage_roles": [
+    1333519022666285152
+  ],
+  "citizens": [
+    968909638579912747
+  ]
+}

@@ -361,5 +361,5 @@ async def setup():
 bot.run(TOKEN)
 
 # Bot invite link for permission scopes:
-# Includes : Manage Roles, Mange Channels, View Channels, Send Messages, Move Members
-# https://discord.com/oauth2/authorize?client_id=1247881264418263121&permissions=285215760&integration_type=0&scope=bot
+# Includes : Manage Roles, Mange Channels, View Channels, Send Messages, Move Members, Connect
+# https://discord.com/oauth2/authorize?client_id=1247881264418263121&permissions=286264336&integration_type=0&scope=bot
