@@ -1,0 +1,113 @@
+{
+  "help": {
+    "name": "Besoin d'aide",
+    "trigger_channel_ids": [
+      1292236327227752560
+    ],
+    "channel_name_template": "🚨 BDA de - {username}",
+    "permissions": {
+      "manage": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true
+      },
+      "allowed": {
+        "connect": true,
+        "view_channel": true
+      },
+      "citizens": {
+        "connect": false,
+        "view_channel": true
+      },
+      "member": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true,
+        "manage_roles": true
+      }
+    }
+  },
+  "invisible": {
+    "name": "Bureau invisible",
+    "trigger_channel_ids": [
+      1335020948604059691
+    ],
+    "channel_name_template": "🔒 Bureau - {username}",
+    "permissions": {
+      "manage": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true
+      },
+      "allowed": {
+        "connect": false,
+        "view_channel": true
+      },
+      "citizens": {
+        "connect": false,
+        "view_channel": false
+      },
+      "member": {
+        "connect": true,
+        "view_channel": true
+      }
+    }
+  },
+  "referencement": {
+    "name": "Référencement",
+    "trigger_channel_ids": [
+      1292246403262840975
+    ],
+    "channel_name_template": "🥑 Référencement - {username}",
+    "permissions": {
+      "manage": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true,
+        "manage_roles": true
+      },
+      "allowed": {
+        "connect": false,
+        "view_channel": true
+      },
+      "citizens": {
+        "connect": false,
+        "view_channel": true
+      },
+      "member": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true
+      }
+    }
+  },
+  "helpeur": {
+    "name": "helpeur",
+    "trigger_channel_ids": [
+      1367044765337784394
+    ],
+    "channel_name_template": "Helpeur - {username}",
+    "permissions": {
+      "citizens": {
+        "view_channel": true
+      },
+      "command": {
+        "manage_roles": true
+      },
+      "staff": {
+        "connect": true,
+        "view_channel": true
+      },
+      "gestion": {
+        "connect": true,
+        "view_channel": true,
+        "manage_channels": true,
+        "manage_roles": true
+      },
+      "helpeur": {
+        "connect": true,
+        "view_channel": true
+      }
+    }
+  }
+}
