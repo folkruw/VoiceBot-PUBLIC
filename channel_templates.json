@@ -2,9 +2,9 @@
   "help": {
     "name": "Besoin d'aide",
     "trigger_channel_ids": [
-      1292236327227752560
+      1129427584216743966
     ],
-    "channel_name_template": "🚨 BDA de - {username}",
+    "channel_name_template": "🚨 BDA de {username}",
     "permissions": {
       "manage": {
         "connect": true,
@@ -30,9 +30,9 @@
   "invisible": {
     "name": "Bureau invisible",
     "trigger_channel_ids": [
-      1335020948604059691
+      1086382011083669534
     ],
-    "channel_name_template": "🔒 Bureau - {username}",
+    "channel_name_template": "🔒 Bureau invisible de {username}",
     "permissions": {
       "manage": {
         "connect": true,
@@ -56,9 +56,9 @@
   "referencement": {
     "name": "Référencement",
     "trigger_channel_ids": [
-      1292246403262840975
+      1321955414719332352
     ],
-    "channel_name_template": "🥑 Référencement - {username}",
+    "channel_name_template": "🥑 Entretien",
     "permissions": {
       "manage": {
         "connect": true,
