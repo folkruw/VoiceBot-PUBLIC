@@ -59,7 +59,6 @@ async def log_to_webhook(message: str):
                 print(f"Webhook logging failed for {url}: {e}")
 
 
-# Enums
 class Actions(enum.Enum):
     ADD = 1
     REMOVE = 2
@@ -72,7 +71,6 @@ class Types(enum.Enum):
     CITIZENS = 4
 
 
-# Classe principale
 class VoiceBot(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -155,7 +153,6 @@ class VoiceBot(commands.Cog):
             f"Salon créé pour {member.display_name} via template → {temp_channel.name} (ID: {temp_channel.id})")
 
 
-# Fonction d'accès au Cog
 async def get_voice_bot():
     voice_bot = bot.get_cog("VoiceBot")
     if voice_bot is None:
@@ -164,7 +161,6 @@ async def get_voice_bot():
     return voice_bot
 
 
-# Commandes slash (ajout/suppression de rôle)
 @bot.tree.command(name="vb_add_role", description="Ajouter un rôle à une catégorie personnalisée")
 @app_commands.describe(category="Nom de la catégorie", role="Rôle à ajouter")
 async def vb_add_role(interaction: discord.Interaction, category: str, role: discord.Role):
@@ -211,8 +207,6 @@ async def vb_remove_role(interaction: discord.Interaction, category: str, role: 
     await interaction.response.send_message(f"✅ Rôle `{role.name}` retiré de `{category}`.", ephemeral=True)
     await log_to_webhook(f"{interaction.user.display_name} a retiré le rôle {role.name} ({role.id}) de {category}")
 
-
-# UI COMPONENTS
 
 class RoleCategoryDropdown(ui.Select):
     def __init__(self, voice_bot, parent):
@@ -328,8 +322,6 @@ class ConfirmAddButton(ui.Button):
             f"{interaction.user.display_name} a ajouté {added} et retiré {removed} rôle(s) dans {category}"
         )
 
-
-# -------- TEMPLATE UI --------
 
 class TemplateSelect(ui.Select):
     def __init__(self, templates, view_ref):
@@ -717,7 +709,7 @@ class DuplicateTemplateModal(ui.Modal, title="Nom du nouveau modèle"):
         if new_name in voice_bot.templates:
             await interaction.response.send_message("❌ Ce nom de modèle existe déjà.", ephemeral=True)
             return
-        # Dupliquer le contenu actuel
+
         voice_bot.templates[new_name] = {
             "name": new_name,
             "trigger_channel_ids": self.view_ref.trigger_ids,
@@ -740,7 +732,6 @@ class DuplicateTemplateButton(ui.Button):
         await interaction.response.send_modal(DuplicateTemplateModal(self.view_ref))
 
 
-# Événement on_ready
 @bot.event
 async def on_ready():
     print(f"{bot.user} connecté à : {[f'{g.name} (ID: {g.id})' for g in bot.guilds]}")
@@ -749,5 +740,4 @@ async def on_ready():
     await log_to_webhook(f"Bot lancé sur {len(bot.guilds)} serveur(s).")
 
 
-# Lancement du bot
 bot.run(TOKEN)
